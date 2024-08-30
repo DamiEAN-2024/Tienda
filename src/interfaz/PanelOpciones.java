@@ -1,10 +1,10 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad Ean (Bogotá - Colombia)
- * Programa de Ingeniería de Sistemas
+ * Universidad Ean (Bogotï¿½ - Colombia)
+ * Programa de Ingenierï¿½a de Sistemas
  * Licenciado bajo el esquema Academic Free License version 2.1
  * <p>
- * Desarrollo de Software - Guía 2 - Actividad 2
+ * Desarrollo de Software - Guï¿½a 2 - Actividad 2
  * Ejercicio: tienda
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
@@ -29,7 +29,7 @@ public class PanelOpciones extends JPanel implements ActionListener {
     // -----------------------------------------------------------------
 
     /**
-     * Comando para mostrar el producto más vendido.
+     * Comando para mostrar el producto mï¿½s vendido.
      */
     private static final String MAS_VENDIDO = "MasVendido";
 
@@ -49,21 +49,27 @@ public class PanelOpciones extends JPanel implements ActionListener {
     private static final String DINERO_CAJA = "DineroCaja";
 
     /**
-     * Comando Opción 1.
+     * Comando Opciï¿½n 1.
      */
     private static final String OPCION_1 = "InferiorPromedio";
 
     /**
-     * Comando Opción 2.
+     * Comando Opciï¿½n 2.
      */
     private static final String OPCION_2 = "ProductoMasBarato";
+    
+    /**
+     * Ver stock.
+     */
+    private static final String STOCK_CRITICO = "StockCritico";
+
 
     // -----------------------------------------------------------------
     // Atributos
     // -----------------------------------------------------------------
 
     /**
-     * Ventana principal de la aplicación.
+     * Ventana principal de la aplicaciï¿½n.
      */
     private InterfazTienda principal;
 
@@ -72,34 +78,40 @@ public class PanelOpciones extends JPanel implements ActionListener {
     // -----------------------------------------------------------------
 
     /**
-     * Botón para mostrar el más vendido.
+     * Botï¿½n para mostrar el mï¿½s vendido.
      */
     private JButton btnMasVendido;
 
     /**
-     * Botón para mostrar el menos vendido.
+     * Botï¿½n para mostrar el menos vendido.
      */
     private JButton btnMenosVendido;
 
     /**
-     * Botón para mostrar el promedio de ventas.
+     * Botï¿½n para mostrar el promedio de ventas.
      */
     private JButton btnPromedioVentas;
 
     /**
-     * Botón para ventas en volumen.
+     * Botï¿½n para ventas en volumen.
      */
     private JButton btnDineroCaja;
 
     /**
-     * Botón Opción 1.
+     * Botï¿½n Opciï¿½n 1.
      */
     private JButton btnOpcion1;
 
     /**
-     * Botón Opción 2.
+     * Botï¿½n Opciï¿½n 2.
      */
     private JButton btnOpcion2;
+    
+    /**
+     * Botï¿½n StockCritico.
+     */
+    private JButton btnStockCritico;
+
 
     // -----------------------------------------------------------------
     // Constructores
@@ -116,7 +128,7 @@ public class PanelOpciones extends JPanel implements ActionListener {
         setBorder(new TitledBorder("Opciones"));
         setLayout(new GridLayout(2, 3));
 
-        btnMasVendido = new JButton("Producto más vendido");
+        btnMasVendido = new JButton("Producto mÃ¡s vendido");
         btnMasVendido.setActionCommand(MAS_VENDIDO);
         btnMasVendido.addActionListener(this);
         add(btnMasVendido);
@@ -141,20 +153,26 @@ public class PanelOpciones extends JPanel implements ActionListener {
         btnOpcion1.addActionListener(this);
         add(btnOpcion1);
 
-        btnOpcion2 = new JButton("Promedio mas barato");
+        btnOpcion2 = new JButton("Promedio mÃ¡s barato");
         btnOpcion2.setActionCommand(OPCION_2);
         btnOpcion2.addActionListener(this);
         add(btnOpcion2);
+        
+        btnStockCritico = new JButton("Stock CrÃ­tico");
+        btnStockCritico.setActionCommand(STOCK_CRITICO);
+        btnStockCritico.addActionListener(this);
+        add(btnStockCritico);
+
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
      * Manejo de los eventos de los botones.
      *
-     * @param pEvento Acción que generó el evento.
+     * @param pEvento Acciï¿½n que generï¿½ el evento.
      */
     public void actionPerformed(ActionEvent pEvento) {
         String comando = pEvento.getActionCommand();
@@ -171,6 +189,10 @@ public class PanelOpciones extends JPanel implements ActionListener {
         } else if (comando.equals(OPCION_2)) {
             principal.reqFuncOpcion2();
         }
+          else if (comando.equals(STOCK_CRITICO)) {
+            principal.mostrarStockCritico();
+        }
+
     }
 
 }

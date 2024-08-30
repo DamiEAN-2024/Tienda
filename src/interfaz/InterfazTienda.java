@@ -1,10 +1,10 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad Ean (Bogotá - Colombia)
- * Programa de Ingeniería de Sistemas
+ * Universidad Ean (Bogotï¿½ - Colombia)
+ * Programa de Ingenierï¿½a de Sistemas
  * Licenciado bajo el esquema Academic Free License version 2.1
  * <p>
- * Desarrollo de Software - Guía 2 - Actividad 2
+ * Desarrollo de Software - Guï¿½a 2 - Actividad 2
  * Ejercicio: tienda
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 
 /**
- * Ventana principal de la aplicación.
+ * Ventana principal de la aplicaciï¿½n.
  */
 @SuppressWarnings("serial")
 public class InterfazTienda extends JFrame {
@@ -39,7 +39,7 @@ public class InterfazTienda extends JFrame {
     // -----------------------------------------------------------------
 
     /**
-     * Panel con la imagen del título.
+     * Panel con la imagen del tï¿½tulo.
      */
     private PanelImagen panelImagen;
 
@@ -49,22 +49,22 @@ public class InterfazTienda extends JFrame {
     private PanelOpciones panelOpciones;
 
     /**
-     * Panel para mostrar la información del producto1.
+     * Panel para mostrar la informaciï¿½n del producto1.
      */
     private PanelProducto panelProducto1;
 
     /**
-     * Panel para mostrar la información del producto2.
+     * Panel para mostrar la informaciï¿½n del producto2.
      */
     private PanelProducto panelProducto2;
 
     /**
-     * Panel para mostrar la información del producto3.
+     * Panel para mostrar la informaciï¿½n del producto3.
      */
     private PanelProducto panelProducto3;
 
     /**
-     * Panel para mostrar la información del producto.
+     * Panel para mostrar la informaciï¿½n del producto.
      */
     private PanelProducto panelProducto4;
 
@@ -73,11 +73,11 @@ public class InterfazTienda extends JFrame {
     // -----------------------------------------------------------------
 
     /**
-     * Construye la ventana principal de la aplicación.
+     * Construye la ventana principal de la aplicaciï¿½n.
      */
     public InterfazTienda() {
         setTitle("Tienda Cupi2");
-        setSize(800, 720);
+        setSize(800, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         tienda = new Tienda();
@@ -111,11 +111,11 @@ public class InterfazTienda extends JFrame {
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
-     * Actualiza la información de los paneles.
+     * Actualiza la informaciï¿½n de los paneles.
      */
     private void actualizar() {
         panelProducto1.actualizarInfo(tienda.darPrimerProducto());
@@ -125,7 +125,7 @@ public class InterfazTienda extends JFrame {
     }
 
     /**
-     * Vende una cantidad de unidades del producto con el nombre dado por parámetro.
+     * Vende una cantidad de unidades del producto con el nombre dado por parï¿½metro.
      * @param pNombreProducto Nombre del producto. pNombreProducto != null && pNombreProducto != "".
      */
     public void venderProducto(String pNombreProducto) {
@@ -145,13 +145,13 @@ public class InterfazTienda extends JFrame {
                     JOptionPane.showMessageDialog(this, "La cantidad ingresada debe ser mayor a cero.", "Vender producto", JOptionPane.ERROR_MESSAGE);
                 }
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "El valor ingresado debe ser un valor numérico.", "Vender producto", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "El valor ingresado debe ser un valor numï¿½rico.", "Vender producto", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
 
     /**
-     * Abastece una cantidad de unidades del producto con el nombre dado por parámetro.
+     * Abastece una cantidad de unidades del producto con el nombre dado por parï¿½metro.
      * @param pNombreProducto Nombre del producto. pNombreProducto != null && pNombreProducto != "".
      */
     public void abastecerUnidades(String pNombreProducto) {
@@ -163,7 +163,7 @@ public class InterfazTienda extends JFrame {
                     boolean abastecio = tienda.abastecerProducto(pNombreProducto, cantidad);
                     actualizar();
                     if (abastecio) {
-                        JOptionPane.showMessageDialog(this, "Se abasteció la tienda.", "Abastecer producto", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(this, "Se abasteciï¿½ la tienda.", "Abastecer producto", JOptionPane.INFORMATION_MESSAGE);
                     } else {
                         JOptionPane.showMessageDialog(this, "No se pudo abastecer la tienda.", "Abastecer producto", JOptionPane.ERROR_MESSAGE);
 
@@ -172,19 +172,19 @@ public class InterfazTienda extends JFrame {
                     JOptionPane.showMessageDialog(this, "La cantidad ingresada debe ser mayor a cero.", "Abastecer producto", JOptionPane.ERROR_MESSAGE);
                 }
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "El valor ingresado debe ser un valor numérico.", "Abastecer producto", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "El valor ingresado debe ser un valor numï¿½rico.", "Abastecer producto", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
 
     /**
-     * Cambia el producto con el nombre actual con los valores dados por parámetro.
+     * Cambia el producto con el nombre actual con los valores dados por parï¿½metro.
      * @param pNombreActual Nombre actual del producto. pNombreActual != null && pNombreActual != "".
      * @param pNombreNuevo Nuevo nombre del producto. pNombreNuevo != null && pNombreNuevo != "".
      * @param pTipo Tipo del producto. pTipo != null.
      * @param pValorUnitario valor unitario del producto. pValorUnitario >= 0.
      * @param pCantidadBodega Cantidad en bodega del producto. pCantidadBodega >= 0.
-     * @param pCantidadMinima Cantidad mínima del producto. pCantidadMinima >= 0.
+     * @param pCantidadMinima Cantidad mï¿½nima del producto. pCantidadMinima >= 0.
      * @param pRutaImagen Ruta de la imagen del producto. pRutaImagen != null && pRutaImagen != "".
      */
     public void cambiarProducto(String pNombreActual, String pNombreNuevo, String pTipo, double pValorUnitario, int pCantidadBodega, int pCantidadMinima, String pRutaImagen) {
@@ -197,13 +197,13 @@ public class InterfazTienda extends JFrame {
     }
 
     /**
-     * Muestra el producto más vendido.
+     * Muestra el producto mï¿½s vendido.
      */
     public void mostrarMasVendido() {
         if (tienda.darProductoMasVendido() != null) {
-            JOptionPane.showMessageDialog(this, "El producto más vendido es: " + tienda.darProductoMasVendido().darNombre(), "Producto más vendido", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "El producto mï¿½s vendido es: " + tienda.darProductoMasVendido().darNombre(), "Producto mï¿½s vendido", JOptionPane.INFORMATION_MESSAGE);
         } else {
-            JOptionPane.showMessageDialog(this, "Ningún produto tiene unidades vendidas.", "Producto más vendido", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Ningï¿½n produto tiene unidades vendidas.", "Producto mï¿½s vendido", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -214,7 +214,7 @@ public class InterfazTienda extends JFrame {
         if (tienda.darProductoMenosVendido() != null) {
             JOptionPane.showMessageDialog(this, "El producto menos vendido es: " + tienda.darProductoMenosVendido().darNombre(), "Producto menos vendido", JOptionPane.INFORMATION_MESSAGE);
         } else {
-            JOptionPane.showMessageDialog(this, "Ningún produto tiene unidades vendidas.", "Producto menos vendido", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Ningï¿½n produto tiene unidades vendidas.", "Producto menos vendido", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -241,12 +241,13 @@ public class InterfazTienda extends JFrame {
         JOptionPane.showMessageDialog(this, "El promedio de ventas es: " + tienda.darPromedioVentas(), "Promedio ventas", JOptionPane.INFORMATION_MESSAGE);
     }
 
+    
     // -----------------------------------------------------------------
-    // Puntos de Extensión
+    // Puntos de Extensiï¿½n
     // -----------------------------------------------------------------
 
     /**
-     * Método para la extensión 1.
+     * Mï¿½todo para la extensiï¿½n 1.
      */
     public void reqFuncOpcion1() {
         int resultado = tienda.metodo1();
@@ -258,13 +259,13 @@ public class InterfazTienda extends JFrame {
     }
 
     /**
-     * Método para la extensión 2.
+     * Mï¿½todo para la extensiï¿½n 2.
      */
     public void reqFuncOpcion2() {
         String resultado = tienda.metodo2();
         actualizar();
         JOptionPane.showMessageDialog(this,
-                "El producto más barato se llama: " + resultado,
+                "El producto mï¿½s barato se llama: " + resultado,
                 "Producto barato",
                 JOptionPane.INFORMATION_MESSAGE);
     }
@@ -274,8 +275,8 @@ public class InterfazTienda extends JFrame {
     // -----------------------------------------------------------------
 
     /**
-     * Ejecuta la aplicación.
-     * @param pArgs Parámetros de la ejecución. No son necesarios.
+     * Ejecuta la aplicaciï¿½n.
+     * @param pArgs Parï¿½metros de la ejecuciï¿½n. No son necesarios.
      */
     public static void main(String[] pArgs) {
         try {
@@ -288,5 +289,31 @@ public class InterfazTienda extends JFrame {
             e.printStackTrace();
         }
     }
+
+		public void mostrarStockCritico() {
+		    StringBuilder mensaje = new StringBuilder("Productos con stock crÃ­tico:\n");
+
+		    // Se verifica cada producto para ver si estÃ¡ en stock crÃ­tico
+		    if (tienda.darPrimerProducto().puedeAbastecer()) {
+		        mensaje.append(tienda.darPrimerProducto().darNombre()).append("\n");
+		    }
+		    if (tienda.darSegundoProducto().puedeAbastecer()) {
+		        mensaje.append(tienda.darSegundoProducto().darNombre()).append("\n");
+		    }
+		    if (tienda.darTercerProducto().puedeAbastecer()) {
+		        mensaje.append(tienda.darTercerProducto().darNombre()).append("\n");
+		    }
+		    if (tienda.darCuartoProducto().puedeAbastecer()) {
+		        mensaje.append(tienda.darCuartoProducto().darNombre()).append("\n");
+		    }
+
+		    // Mostrar un mensaje si no hay productos en stock crÃ­tico
+		    if (mensaje.toString().equals("Productos con stock crÃ­tico:\n")) {
+		        mensaje = new StringBuilder("No hay productos en stock crÃ­tico.");
+		    }
+
+		    // Mostrar el mensaje al usuario
+		    JOptionPane.showMessageDialog(this, mensaje.toString(), "Stock CrÃ­tico", JOptionPane.WARNING_MESSAGE);
+		}
 
 }

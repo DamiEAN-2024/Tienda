@@ -1,10 +1,10 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad Ean (Bogotá - Colombia)
- * Programa de Ingeniería de Sistemas
+ * Universidad Ean (Bogotï¿½ - Colombia)
+ * Programa de Ingenierï¿½a de Sistemas
  * Licenciado bajo el esquema Academic Free License version 2.1
  * <p>
- * Desarrollo de Software - Guía 2 - Actividad 2
+ * Desarrollo de Software - Guï¿½a 2 - Actividad 2
  * Ejercicio: tienda
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
@@ -26,7 +26,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
 /**
- * Panel que muestra la información de un producto.
+ * Panel que muestra la informaciï¿½n de un producto.
  */
 @SuppressWarnings("serial")
 public class PanelProducto extends JPanel implements ActionListener {
@@ -40,12 +40,12 @@ public class PanelProducto extends JPanel implements ActionListener {
     private static final String CAMBIAR_PRODUCTO = "CambiarProducto";
 
     /**
-     * Comando para el botón de comprar.
+     * Comando para el botï¿½n de comprar.
      */
     private static final String BOTON_ABASTECER = "Abastecer";
 
     /**
-     * Comando para el botón de vender.
+     * Comando para el botï¿½n de vender.
      */
     private static final String BOTON_VENDER = "Vender";
 
@@ -54,7 +54,7 @@ public class PanelProducto extends JPanel implements ActionListener {
     // -----------------------------------------------------------------
 
     /**
-     * Ventana principal de la aplicación.
+     * Ventana principal de la aplicaciï¿½n.
      */
     private InterfazTienda principal;
 
@@ -88,7 +88,7 @@ public class PanelProducto extends JPanel implements ActionListener {
     private JLabel lblCantidadVendidas;
 
     /**
-     * Etiqueta Cantidad mínima.
+     * Etiqueta Cantidad mï¿½nima.
      */
     private JLabel lblCantidadMinima;
 
@@ -113,7 +113,7 @@ public class PanelProducto extends JPanel implements ActionListener {
     private JTextField txtCantidadVendidas;
 
     /**
-     * Campo de texto con la cantidad mínima de unidades para abastecer,
+     * Campo de texto con la cantidad mï¿½nima de unidades para abastecer,
      */
     private JTextField txtCantidadMinima;
 
@@ -123,17 +123,17 @@ public class PanelProducto extends JPanel implements ActionListener {
     private JLabel lblImagen;
 
     /**
-     * Botón para Vender unidades del producto.
+     * Botï¿½n para Vender unidades del producto.
      */
     private JButton btnVender;
 
     /**
-     * Botón para abastecer el producto.
+     * Botï¿½n para abastecer el producto.
      */
     private JButton btnAbastecer;
 
     /**
-     * Botón para cambiar el producto.
+     * Botï¿½n para cambiar el producto.
      */
     private JButton btnCambiarProducto;
 
@@ -142,9 +142,9 @@ public class PanelProducto extends JPanel implements ActionListener {
     // -----------------------------------------------------------------
 
     /**
-     * Construye el panel con la información del producto.
+     * Construye el panel con la informaciï¿½n del producto.
      *
-     * @param pPrincipal Ventana principal de la aplicación.
+     * @param pPrincipal Ventana principal de la aplicaciï¿½n.
      */
     public PanelProducto(InterfazTienda pPrincipal) {
         principal = pPrincipal;
@@ -183,7 +183,7 @@ public class PanelProducto extends JPanel implements ActionListener {
         panelDatosJuego.add(lblCantidadVendidas);
         panelDatosJuego.add(txtCantidadVendidas);
 
-        lblCantidadMinima = new JLabel("Cantidad mínima: ");
+        lblCantidadMinima = new JLabel("Cantidad mÃ­nima: ");
         txtCantidadMinima = new JTextField(15);
         txtCantidadMinima.setEditable(false);
         panelDatosJuego.add(lblCantidadMinima);
@@ -215,13 +215,13 @@ public class PanelProducto extends JPanel implements ActionListener {
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
-     * Actualiza la información del panel con la información dada.
+     * Actualiza la informaciï¿½n del panel con la informaciï¿½n dada.
      *
-     * @param pProducto Juego para actualizar la información. pJuego != null.
+     * @param pProducto Juego para actualizar la informaciï¿½n. pJuego != null.
      */
     public void actualizarInfo(Producto pProducto) {
         producto = pProducto;
@@ -239,7 +239,7 @@ public class PanelProducto extends JPanel implements ActionListener {
     /**
      * Manejo de los eventos de los botones.
      *
-     * @param pEvento Acción que generó el evento.
+     * @param pEvento Acciï¿½n que generï¿½ el evento.
      */
     public void actionPerformed(ActionEvent pEvento) {
         String comando = pEvento.getActionCommand();
