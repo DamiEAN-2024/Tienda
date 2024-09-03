@@ -145,7 +145,7 @@ public class InterfazTienda extends JFrame {
                     JOptionPane.showMessageDialog(this, "La cantidad ingresada debe ser mayor a cero.", "Vender producto", JOptionPane.ERROR_MESSAGE);
                 }
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "El valor ingresado debe ser un valor num�rico.", "Vender producto", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "El valor ingresado debe ser un valor numérico.", "Vender producto", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -163,7 +163,7 @@ public class InterfazTienda extends JFrame {
                     boolean abastecio = tienda.abastecerProducto(pNombreProducto, cantidad);
                     actualizar();
                     if (abastecio) {
-                        JOptionPane.showMessageDialog(this, "Se abasteci� la tienda.", "Abastecer producto", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(this, "Se abasteció la tienda.", "Abastecer producto", JOptionPane.INFORMATION_MESSAGE);
                     } else {
                         JOptionPane.showMessageDialog(this, "No se pudo abastecer la tienda.", "Abastecer producto", JOptionPane.ERROR_MESSAGE);
 
@@ -172,7 +172,7 @@ public class InterfazTienda extends JFrame {
                     JOptionPane.showMessageDialog(this, "La cantidad ingresada debe ser mayor a cero.", "Abastecer producto", JOptionPane.ERROR_MESSAGE);
                 }
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "El valor ingresado debe ser un valor num�rico.", "Abastecer producto", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "El valor ingresado debe ser un valor numérico.", "Abastecer producto", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -201,9 +201,9 @@ public class InterfazTienda extends JFrame {
      */
     public void mostrarMasVendido() {
         if (tienda.darProductoMasVendido() != null) {
-            JOptionPane.showMessageDialog(this, "El producto m�s vendido es: " + tienda.darProductoMasVendido().darNombre(), "Producto m�s vendido", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "El producto más vendido es: " + tienda.darProductoMasVendido().darNombre(), "Producto más vendido", JOptionPane.INFORMATION_MESSAGE);
         } else {
-            JOptionPane.showMessageDialog(this, "Ning�n produto tiene unidades vendidas.", "Producto m�s vendido", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Ningún produto tiene unidades vendidas.", "Producto más vendido", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -265,7 +265,7 @@ public class InterfazTienda extends JFrame {
         String resultado = tienda.metodo2();
         actualizar();
         JOptionPane.showMessageDialog(this,
-                "El producto m�s barato se llama: " + resultado,
+                "El producto más barato se llama: " + resultado,
                 "Producto barato",
                 JOptionPane.INFORMATION_MESSAGE);
     }
